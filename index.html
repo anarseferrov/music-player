@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music player</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <main>
+      <div class="player">
+        <div class="album">
+          <img src="./music/lorde.jpg" alt="" id="track-image" />
+        </div>
+        <div class="player-component">
+          <p class="track-name">Hard Feelings</p>
+          <p class="track-artist">Lorde</p>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            id="track-range"
+            onchange="change_duration()"
+          />
+          <div class="control-buttons">
+            <button onclick="previous()" id="backward">
+              <i class="fas fa-backward"></i>
+            </button>
+            <button onclick="playPause()" id="playPause">
+              <i class="fas fa-play"></i>
+            </button>
+            <button onclick="next()" id="forward">
+              <i class="fas fa-forward"></i>
+            </button>
+          </div>
+          <div class="mute">
+            <button onclick="mute()" id="mute">
+              <i class="fas fa-volume-mute"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- <i class="fas fa-pause"></i> -->
+    <script
+      src="https://kit.fontawesome.com/01eab78c02.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/player.js"></script>
+  </body>
+</html>
